@@ -1,0 +1,36 @@
+.nav {
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: calc(100dvh - 80px);
+  padding-bottom: 30px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .wrapper {
+    position: relative;
+    display: flex;
+    gap: 30px;
+    margin-bottom: 12px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .nav {
+    max-height: calc(100dvh - 90px);
+    .wrapper {
+      margin-bottom: 0px;
+      justify-content: space-between;
+      gap: 50px;
+    }
+  }
+}
