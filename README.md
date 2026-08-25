@@ -41,17 +41,22 @@ A modern, high-performance personal portfolio built with **Next.js 16 (Turbopack
 - **Features:** Real-time conversational AI voice mock interviews, dynamic role & seniority question generation, instant multi-dimensional scorecards & competency analytics, and glassmorphic glowing waveform UI.
 - **Repository:** [github.com/ujjwalk2523/ai-mock-interviews](https://github.com/ujjwalk2523/ai-mock-interviews)
 
-### 2. [ECM — Equipment Checkout Management System](https://ecm-xi.vercel.app/)
-- **Tech Stack:** Java 17, Spring Boot 3, Spring Data JPA, H2 Database, Maven, Vanilla JS, HTML5, CSS3.
-- **Features:** Automated laboratory resource booking, inventory tracking, REST API backend, and dynamic order state management.
-- **Repository:** [github.com/ujjwalk2523/ecm](https://github.com/ujjwalk2523/ecm)
-
-### 3. [Carbonly — Blockchain Carbon Credit Platform](https://carbonly-iota.vercel.app/)
+### 2. [Carbonly — Blockchain Carbon Credit Platform](https://carbonly-iota.vercel.app/)
 - **Tech Stack:** Solidity, Ethereum, Hardhat, MetaMask, Node.js, Express, MongoDB, React, Tailwind CSS.
 - **Features:** Decentralized carbon offset marketplace, farmer afforestation tokenization, and smart contract settlement.
 - **Repository:** [github.com/ujjwalk2523/CARBONLY](https://github.com/ujjwalk2523/CARBONLY)
 
-### 4. [AI Health Chatbot](https://ai-health-chatbot-bo43szgap2qmekrzx37k8h.streamlit.app/)
+### 3. [ECM — Equipment Checkout Management System](https://ecm-xi.vercel.app/)
+- **Tech Stack:** Java 17, Spring Boot 3, Spring Data JPA, H2 Database, Maven, Vanilla JS, HTML5, CSS3.
+- **Features:** Automated laboratory resource booking, inventory tracking, REST API backend, and dynamic order state management.
+- **Repository:** [github.com/ujjwalk2523/ecm](https://github.com/ujjwalk2523/ecm)
+
+### 4. [AgriLink — Agricultural Market Intelligence & Direct Marketplace](https://agrilink-app-ex4s.onrender.com/)
+- **Tech Stack:** Next.js 15, React 19, TypeScript, Tailwind CSS, Prisma ORM, PostgreSQL, Recharts, Render.
+- **Features:** Smart Net Realization Calculator solving the "Headline Price" illusion, live APMC Mandi market intelligence, 7-day AI price forecasting, direct produce marketplace, conversational AI advisor, and multi-role workspaces.
+- **Repository:** [github.com/ujjwalk2523/agrilink](https://github.com/ujjwalk2523/agrilink)
+
+### 5. [AI Health Chatbot](https://ai-health-chatbot-bo43szgap2qmekrzx37k8h.streamlit.app/)
 - **Tech Stack:** Python, Scikit-Learn, Machine Learning, Streamlit, RESTful API.
 - **Features:** Intelligent disease prediction pipeline from user-reported symptoms with risk probability assessments.
 - **Repository:** [github.com/ujjwalk2523/AI-Health-Chatbot](https://github.com/ujjwalk2523/AI-Health-Chatbot)

@@ -2,11 +2,11 @@ import AceTernityLogo from "@/components/logos/aceternity";
 import SlideShow from "@/components/slide-show";
 import { Button } from "@/components/ui/button";
 import { TypographyH3, TypographyP } from "@/components/ui/typography";
-import { ArrowUpRight, ExternalLink, Link2, MoveUpRight, CheckCircle2, Terminal, Layers, Database, Mic, Sparkles } from "lucide-react";
+import { ArrowUpRight, ExternalLink, Link2, MoveUpRight, CheckCircle2, Terminal, Layers, Database, Mic, Sparkles, TrendingUp } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { ReactNode } from "react";
-import { SiThreedotjs, SiSpringboot, SiSolidity, SiEthereum, SiPython, SiOpenjdk, SiApachemaven, SiHtml5, SiCss3, SiGooglegemini, SiFirebase } from "react-icons/si";
+import { SiThreedotjs, SiSpringboot, SiSolidity, SiEthereum, SiPython, SiOpenjdk, SiApachemaven, SiHtml5, SiCss3, SiGooglegemini, SiFirebase, SiPrisma, SiPostgresql, SiRender } from "react-icons/si";
 
 const BASE_PATH = "/assets/projects-screenshots";
 
@@ -129,6 +129,18 @@ const PROJECT_SKILLS = {
     bg: "black",
     fg: "white",
     icon: <Database className="w-full h-full" />,
+  },
+  render: {
+    title: "Render",
+    bg: "black",
+    fg: "white",
+    icon: <SiRender className="w-full h-full" />,
+  },
+  recharts: {
+    title: "Recharts",
+    bg: "black",
+    fg: "white",
+    icon: <TrendingUp className="w-full h-full" />,
   },
   java: {
     title: "Java 17",
@@ -338,6 +350,71 @@ const projects: Project[] = [
     },
   },
   {
+    id: "carbonly",
+    category: "Web3 & Blockchain",
+    title: "Carbonly — Blockchain Carbon Credit Platform",
+    src: "/assets/projects-screenshots/carbonly/landing.png",
+    screenshots: ["landing.png"],
+    skills: {
+      frontend: [
+        PROJECT_SKILLS.react,
+        PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.metamask,
+      ],
+      backend: [
+        PROJECT_SKILLS.ethereum,
+        PROJECT_SKILLS.solidity,
+        PROJECT_SKILLS.hardhat,
+        PROJECT_SKILLS.node,
+        PROJECT_SKILLS.express,
+        PROJECT_SKILLS.mongo,
+      ],
+    },
+    live: "https://carbonly-iota.vercel.app/",
+    github: "https://github.com/ujjwalk2523/CARBONLY",
+    get content() {
+      return (
+        <div className="space-y-4 sm:space-y-6">
+          <p className="font-mono text-base sm:text-lg md:text-xl font-bold text-left sm:text-center text-foreground leading-snug">
+            🌿 Decentralized Carbon Credit Trading Marketplace &amp; Plantation Tokenization
+          </p>
+          <p className="font-mono text-xs sm:text-sm text-muted-foreground leading-relaxed">
+            A blockchain-based platform focused on democratizing sustainability and carbon offsets. Built to tokenize real-world afforestation efforts into verifiable carbon credits, offering an open decentralized exchange with smart contracts on the Ethereum blockchain.
+          </p>
+          <ProjectsLinks
+            live="https://carbonly-iota.vercel.app/"
+            repo="https://github.com/ujjwalk2523/CARBONLY"
+          />
+
+          <TypographyH3 className="text-base sm:text-lg md:text-xl font-bold my-3 mt-6 sm:mt-8">✨ Key Highlights</TypographyH3>
+          <ul className="space-y-2 font-mono text-xs sm:text-sm text-muted-foreground list-disc ml-4 sm:ml-5">
+            <li>
+              <strong>Decentralized Marketplace:</strong> Built a trustless marketplace for trading verified carbon credits, incentivizing corporate and individual sustainability.
+            </li>
+            <li>
+              <strong>Farmer Tokenization Model:</strong> Enabled agricultural workers and farmers to tokenize tree plantation and conservation efforts, providing a direct, transparent revenue stream via smart contracts.
+            </li>
+            <li>
+              <strong>Smart Contract Execution:</strong> Developed and tested ERC-standard smart contracts using Solidity and Hardhat for automated minting, escrow, and settlement.
+            </li>
+            <li>
+              <strong>Web3 Integration:</strong> Seamless Web3 wallet connectivity via MetaMask for instant transaction signing and credit retirement verification.
+            </li>
+          </ul>
+
+          <TypographyH3 className="text-base sm:text-lg md:text-xl font-bold my-3 mt-6 sm:mt-8">🛠️ Technologies Used</TypographyH3>
+          <div className="flex flex-wrap gap-1.5 sm:gap-2 font-mono text-xs">
+            {["Solidity", "Ethereum", "Hardhat", "MetaMask", "Node.js", "Express.js", "MongoDB", "React", "Tailwind CSS"].map((tech) => (
+              <span key={tech} className="px-2.5 sm:px-3 py-0.5 sm:py-1 bg-secondary/40 border border-border rounded-full text-foreground text-[11px] sm:text-xs">
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
+      );
+    },
+  },
+  {
     id: "ecm",
     category: "Full-Stack Web App",
     title: "ECM — Equipment Checkout Management",
@@ -459,61 +536,149 @@ const projects: Project[] = [
     },
   },
   {
-    id: "carbonly",
-    category: "Web3 & Blockchain",
-    title: "Carbonly — Blockchain Carbon Credit Platform",
-    src: "/assets/projects-screenshots/carbonly/landing.png",
+    id: "agrilink",
+    category: "AgriTech & Direct Marketplace",
+    title: "AgriLink — Agricultural Market Intelligence & Direct Marketplace",
+    src: "/assets/projects-screenshots/agrilink/landing.png",
     screenshots: ["landing.png"],
     skills: {
       frontend: [
+        PROJECT_SKILLS.next,
         PROJECT_SKILLS.react,
+        PROJECT_SKILLS.ts,
         PROJECT_SKILLS.tailwind,
-        PROJECT_SKILLS.metamask,
+        PROJECT_SKILLS.recharts,
       ],
       backend: [
-        PROJECT_SKILLS.ethereum,
-        PROJECT_SKILLS.solidity,
-        PROJECT_SKILLS.hardhat,
-        PROJECT_SKILLS.node,
-        PROJECT_SKILLS.express,
-        PROJECT_SKILLS.mongo,
+        PROJECT_SKILLS.postgres,
+        PROJECT_SKILLS.prisma,
+        PROJECT_SKILLS.render,
+        PROJECT_SKILLS.restApi,
       ],
     },
-    live: "https://carbonly-iota.vercel.app/",
-    github: "https://github.com/ujjwalk2523/CARBONLY",
+    live: "https://agrilink-app-ex4s.onrender.com/",
+    github: "https://github.com/ujjwalk2523/agrilink",
     get content() {
       return (
         <div className="space-y-4 sm:space-y-6">
           <p className="font-mono text-base sm:text-lg md:text-xl font-bold text-left sm:text-center text-foreground leading-snug">
-            🌿 Decentralized Carbon Credit Trading Marketplace &amp; Plantation Tokenization
+            🌾 Next-Gen Agricultural Trading, Smart Net Realization &amp; Direct Farmgate Marketplace
           </p>
           <p className="font-mono text-xs sm:text-sm text-muted-foreground leading-relaxed">
-            A blockchain-based platform focused on democratizing sustainability and carbon offsets. Built to tokenize real-world afforestation efforts into verifiable carbon credits, offering an open decentralized exchange with smart contracts on the Ethereum blockchain.
+            <strong>AgriLink</strong> is a next-generation agricultural trading and price discovery platform engineered to eliminate the critical &ldquo;Headline Price&rdquo; illusion faced by farmers. By calculating true in-pocket profit after factoring in freight, loading charges, mandi cess, commission agent fees (2.5% - 4%), and transit perishable spoilage, AgriLink connects farmers directly to verified institutional buyers, FPOs, and cold-chain logistics providers.
           </p>
           <ProjectsLinks
-            live="https://carbonly-iota.vercel.app/"
-            repo="https://github.com/ujjwalk2523/CARBONLY"
+            live="https://agrilink-app-ex4s.onrender.com/"
+            repo="https://github.com/ujjwalk2523/agrilink"
           />
 
-          <TypographyH3 className="text-base sm:text-lg md:text-xl font-bold my-3 mt-6 sm:mt-8">✨ Key Highlights</TypographyH3>
+          <TypographyH3 className="text-base sm:text-lg md:text-xl font-bold my-3 mt-6 sm:mt-8">✨ Key Highlights &amp; Features</TypographyH3>
           <ul className="space-y-2 font-mono text-xs sm:text-sm text-muted-foreground list-disc ml-4 sm:ml-5">
             <li>
-              <strong>Decentralized Marketplace:</strong> Built a trustless marketplace for trading verified carbon credits, incentivizing corporate and individual sustainability.
+              <strong>⚖️ Smart Net Realization Calculator (/compare):</strong> Compares APMC Mandis (Lasalgaon, Vashi APMC, Azadpur) vs. Direct Corporate Farmgate Hubs (Reliance Fresh, ITC e-Choupal) by computing distance freight, mandi cess, agent commissions, unloading fees, and crop perishability transit risk with an AI-ranked score out of 100.
             </li>
             <li>
-              <strong>Farmer Tokenization Model:</strong> Enabled agricultural workers and farmers to tokenize tree plantation and conservation efforts, providing a direct, transparent revenue stream via smart contracts.
+              <strong>📈 Live Mandi Market Intelligence (/market-prices):</strong> Real-time price discovery across Maharashtra, MP, Karnataka, Delhi NCR, Gujarat, and AP with modal, minimum, maximum spreads, daily arrival volumes, and 7-day AI price trend forecasting with confidence intervals.
             </li>
             <li>
-              <strong>Smart Contract Execution:</strong> Developed and tested ERC-standard smart contracts using Solidity and Hardhat for automated minting, escrow, and settlement.
+              <strong>🛍️ Direct Produce Marketplace (/marketplace):</strong> Verified crop listings with quality grading (Grade A, B, C, Organic), negotiable escrow terms, and farmgate pickup options.
             </li>
             <li>
-              <strong>Web3 Integration:</strong> Seamless Web3 wallet connectivity via MetaMask for instant transaction signing and credit retirement verification.
+              <strong>🤖 AI Market Advisor (/api/ai/assistant):</strong> Conversational AI assistant trained on crop economics and market dynamics providing instant advice on harvest timing, optimal delivery routes, and payment safety.
+            </li>
+            <li>
+              <strong>👥 Multi-Role Enterprise Workspaces:</strong> Dedicated dashboards for Farmers (listings, bids, payout tracking), Buyers (bulk procurement, QC inspection logs, escrow), FPOs (smallholder produce aggregation), Logistics Fleets (reefer truck matching, GPS delivery), and Admins (KYC verification &amp; dispute audits).
             </li>
           </ul>
 
+          <TypographyH3 className="text-base sm:text-lg md:text-xl font-bold my-3 mt-6 sm:mt-8">🧠 Tech Stack &amp; Architecture</TypographyH3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 my-3 font-mono text-xs sm:text-sm">
+            <div className="p-3.5 sm:p-4 rounded-xl border border-border bg-secondary/20">
+              <p className="font-bold text-sm sm:text-base mb-2 text-primary">Frontend &amp; Visual Analytics</p>
+              <ul className="space-y-1 text-muted-foreground list-disc ml-4">
+                <li><strong>Framework:</strong> Next.js 15 (App Router) + React 19</li>
+                <li><strong>Language:</strong> TypeScript</li>
+                <li><strong>Styling:</strong> Tailwind CSS with Lucide Icons</li>
+                <li><strong>Data Visualization:</strong> Recharts (Price Spreads &amp; Volume Trends)</li>
+                <li><strong>Architecture:</strong> Responsive Multi-Role Enterprise Portals</li>
+              </ul>
+            </div>
+            <div className="p-3.5 sm:p-4 rounded-xl border border-border bg-secondary/20">
+              <p className="font-bold text-sm sm:text-base mb-2 text-primary">Backend &amp; Cloud Database</p>
+              <ul className="space-y-1 text-muted-foreground list-disc ml-4">
+                <li><strong>Database:</strong> PostgreSQL (Managed Cloud Instance)</li>
+                <li><strong>ORM:</strong> Prisma ORM (Type-Safe Schema &amp; Queries)</li>
+                <li><strong>Hosting &amp; CI/CD:</strong> Render (Web Service &amp; Database)</li>
+                <li><strong>AI Engine:</strong> Conversational Market Intelligence Advisor</li>
+                <li><strong>API Layer:</strong> Serverless Edge Handlers &amp; RESTful Routes</li>
+              </ul>
+            </div>
+          </div>
+
+          <TypographyH3 className="text-base sm:text-lg md:text-xl font-bold my-3 mt-6 sm:mt-8">🔌 Serverless API Endpoints Overview</TypographyH3>
+          <div className="overflow-x-auto my-3 -mx-1 sm:mx-0 max-w-full">
+            <table className="w-full text-left font-mono text-xs sm:text-sm border-collapse border border-border rounded-lg overflow-hidden min-w-[320px]">
+              <thead className="bg-secondary/40 text-foreground font-semibold">
+                <tr>
+                  <th className="p-2.5 sm:p-3 border border-border">Method</th>
+                  <th className="p-2.5 sm:p-3 border border-border">Endpoint</th>
+                  <th className="p-2.5 sm:p-3 border border-border">Description</th>
+                </tr>
+              </thead>
+              <tbody className="text-muted-foreground">
+                <tr className="border-t border-border">
+                  <td className="p-2.5 sm:p-3 border border-border font-bold text-blue-500">GET</td>
+                  <td className="p-2.5 sm:p-3 border border-border font-mono text-[11px] sm:text-xs">/api/market-prices</td>
+                  <td className="p-2.5 sm:p-3 border border-border">Fetch real-time mandi prices &amp; market arrivals</td>
+                </tr>
+                <tr className="border-t border-border">
+                  <td className="p-2.5 sm:p-3 border border-border font-bold text-emerald-500">POST</td>
+                  <td className="p-2.5 sm:p-3 border border-border font-mono text-[11px] sm:text-xs">/api/compare</td>
+                  <td className="p-2.5 sm:p-3 border border-border">Calculate true net realization &amp; rank selling options</td>
+                </tr>
+                <tr className="border-t border-border">
+                  <td className="p-2.5 sm:p-3 border border-border font-bold text-amber-500">GET, POST</td>
+                  <td className="p-2.5 sm:p-3 border border-border font-mono text-[11px] sm:text-xs">/api/listings</td>
+                  <td className="p-2.5 sm:p-3 border border-border">Retrieve and publish verified produce listings</td>
+                </tr>
+                <tr className="border-t border-border">
+                  <td className="p-2.5 sm:p-3 border border-border font-bold text-purple-500">GET, POST</td>
+                  <td className="p-2.5 sm:p-3 border border-border font-mono text-[11px] sm:text-xs">/api/offers</td>
+                  <td className="p-2.5 sm:p-3 border border-border">Manage buyer bids &amp; contract agreements</td>
+                </tr>
+                <tr className="border-t border-border">
+                  <td className="p-2.5 sm:p-3 border border-border font-bold text-cyan-500">GET, POST</td>
+                  <td className="p-2.5 sm:p-3 border border-border font-mono text-[11px] sm:text-xs">/api/transport</td>
+                  <td className="p-2.5 sm:p-3 border border-border">Dispatch logistics jobs &amp; driver quotes</td>
+                </tr>
+                <tr className="border-t border-border">
+                  <td className="p-2.5 sm:p-3 border border-border font-bold text-emerald-500">POST</td>
+                  <td className="p-2.5 sm:p-3 border border-border font-mono text-[11px] sm:text-xs">/api/ai/assistant</td>
+                  <td className="p-2.5 sm:p-3 border border-border">AI conversational market advisor &amp; harvest guidance</td>
+                </tr>
+                <tr className="border-t border-border">
+                  <td className="p-2.5 sm:p-3 border border-border font-bold text-rose-500">GET, POST</td>
+                  <td className="p-2.5 sm:p-3 border border-border font-mono text-[11px] sm:text-xs">/api/admin/kyc</td>
+                  <td className="p-2.5 sm:p-3 border border-border">User KYC verification &amp; status audits</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
           <TypographyH3 className="text-base sm:text-lg md:text-xl font-bold my-3 mt-6 sm:mt-8">🛠️ Technologies Used</TypographyH3>
           <div className="flex flex-wrap gap-1.5 sm:gap-2 font-mono text-xs">
-            {["Solidity", "Ethereum", "Hardhat", "MetaMask", "Node.js", "Express.js", "MongoDB", "React", "Tailwind CSS"].map((tech) => (
+            {[
+              "Next.js 15",
+              "React 19",
+              "TypeScript",
+              "Tailwind CSS",
+              "Prisma ORM",
+              "PostgreSQL",
+              "Recharts",
+              "Render",
+              "RESTful API",
+              "AI Market Advisor",
+            ].map((tech) => (
               <span key={tech} className="px-2.5 sm:px-3 py-0.5 sm:py-1 bg-secondary/40 border border-border rounded-full text-foreground text-[11px] sm:text-xs">
                 {tech}
               </span>
