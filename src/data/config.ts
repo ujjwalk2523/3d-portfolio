@@ -35,7 +35,7 @@ const config = {
     "PostgreSQL",
   ],
   author: "Ujjwal Kumar",
-  email: "ujjwalk2523@gmail.com",
+  email: "ujjwalbhumi0@gmail.com",
   phone: "+91 8340246889",
   location: "Chennai, India",
   site: "https://ujjwalk2523.github.io",
