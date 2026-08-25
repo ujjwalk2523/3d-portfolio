@@ -2,11 +2,11 @@ import AceTernityLogo from "@/components/logos/aceternity";
 import SlideShow from "@/components/slide-show";
 import { Button } from "@/components/ui/button";
 import { TypographyH3, TypographyP } from "@/components/ui/typography";
-import { ArrowUpRight, ExternalLink, Link2, MoveUpRight, CheckCircle2, Terminal, Layers, Database } from "lucide-react";
+import { ArrowUpRight, ExternalLink, Link2, MoveUpRight, CheckCircle2, Terminal, Layers, Database, Mic, Sparkles } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { ReactNode } from "react";
-import { SiThreedotjs, SiSpringboot, SiSolidity, SiEthereum, SiPython, SiOpenjdk, SiApachemaven, SiHtml5, SiCss3 } from "react-icons/si";
+import { SiThreedotjs, SiSpringboot, SiSolidity, SiEthereum, SiPython, SiOpenjdk, SiApachemaven, SiHtml5, SiCss3, SiGooglegemini, SiFirebase } from "react-icons/si";
 
 const BASE_PATH = "/assets/projects-screenshots";
 
@@ -112,6 +112,24 @@ const PROJECT_SKILLS = {
   motion: brand("Motion", "motion.svg"),
   supabase: brand("Supabase", "supabase-mono.svg"),
   // Custom skills for Ujjwal's projects
+  gemini: {
+    title: "Google Gemini",
+    bg: "black",
+    fg: "white",
+    icon: <SiGooglegemini className="w-full h-full" />,
+  },
+  vapi: {
+    title: "Vapi AI (Voice)",
+    bg: "black",
+    fg: "white",
+    icon: <Mic className="w-full h-full" />,
+  },
+  firestore: {
+    title: "Cloud Firestore",
+    bg: "black",
+    fg: "white",
+    icon: <Database className="w-full h-full" />,
+  },
   java: {
     title: "Java 17",
     bg: "black",
@@ -205,6 +223,120 @@ export type Project = {
 };
 
 const projects: Project[] = [
+  {
+    id: "levelift",
+    category: "AI & Voice Platform",
+    title: "LeveLift — AI Mock Interview Platform",
+    src: "/assets/projects-screenshots/levelift/landing.png",
+    screenshots: ["landing.png"],
+    skills: {
+      frontend: [
+        PROJECT_SKILLS.next,
+        PROJECT_SKILLS.react,
+        PROJECT_SKILLS.ts,
+        PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.vapi,
+      ],
+      backend: [
+        PROJECT_SKILLS.gemini,
+        PROJECT_SKILLS.firebase,
+        PROJECT_SKILLS.firestore,
+        PROJECT_SKILLS.restApi,
+      ],
+    },
+    live: "https://ai-mock-interviews-ochre-beta.vercel.app/",
+    github: "https://github.com/ujjwalk2523/ai-mock-interviews",
+    get content() {
+      return (
+        <div className="space-y-4 sm:space-y-6">
+          <p className="font-mono text-base sm:text-lg md:text-xl font-bold text-left sm:text-center text-foreground leading-snug">
+            🎙️ Real-Time AI Voice Mock Interview Platform &amp; Intelligent Evaluation System
+          </p>
+          <p className="font-mono text-xs sm:text-sm text-muted-foreground leading-relaxed">
+            <strong>LeveLift</strong> is an AI-powered voice mock interview platform that simulates realistic job interviews in real time. Built with <strong>Next.js 15 (App Router)</strong>, <strong>React 19</strong>, <strong>Vapi AI Web SDK</strong> for natural conversational speech, and <strong>Google Gemini (gemini-2.5-flash)</strong> for dynamic role-specific question generation and comprehensive performance evaluation.
+          </p>
+          <ProjectsLinks
+            live="https://ai-mock-interviews-ochre-beta.vercel.app/"
+            repo="https://github.com/ujjwalk2523/ai-mock-interviews"
+          />
+
+          <TypographyH3 className="text-base sm:text-lg md:text-xl font-bold my-3 mt-6 sm:mt-8">✨ Key Highlights &amp; Features</TypographyH3>
+          <ul className="space-y-2 font-mono text-xs sm:text-sm text-muted-foreground list-disc ml-4 sm:ml-5">
+            <li>
+              <strong>Real-Time Voice Interviews:</strong> Natural, low-latency conversational interviews powered by the Vapi AI Web SDK with live speech synthesis, recognition, and interactive glowing audio waveforms.
+            </li>
+            <li>
+              <strong>Dynamic AI Question Generation:</strong> Context-aware question synthesis tailored to exact job roles, experience levels (Junior, Mid, Senior), and target tech stacks using Google Gemini.
+            </li>
+            <li>
+              <strong>Instant Evaluation &amp; Scorecards:</strong> Comprehensive scorecards delivering overall readiness percentage, competency breakdown (Data Structures, System Design, Problem Solving, Communication), core strengths, and actionable feedback.
+            </li>
+            <li>
+              <strong>Tech &amp; Domain Badges:</strong> Smart badges spanning Full-Stack Engineering, VLSI, AI/ML, DevOps, Cloud Infrastructure, and more.
+            </li>
+            <li>
+              <strong>Secure Authentication &amp; Session Tracking:</strong> Seamless user login and interview history management powered by Firebase Auth and Cloud Firestore.
+            </li>
+          </ul>
+
+          <TypographyH3 className="text-base sm:text-lg md:text-xl font-bold my-3 mt-6 sm:mt-8">🧠 Tech Stack &amp; Architecture</TypographyH3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 my-3 font-mono text-xs sm:text-sm">
+            <div className="p-3.5 sm:p-4 rounded-xl border border-border bg-secondary/20">
+              <p className="font-bold text-sm sm:text-base mb-2 text-primary">Frontend &amp; Voice UI</p>
+              <ul className="space-y-1 text-muted-foreground list-disc ml-4">
+                <li><strong>Framework:</strong> Next.js 15 (App Router) + React 19</li>
+                <li><strong>Language:</strong> TypeScript</li>
+                <li><strong>Styling:</strong> Tailwind CSS with Dark-Mode Glassmorphism</li>
+                <li><strong>Voice AI:</strong> Vapi AI Web SDK (Real-time bi-directional audio)</li>
+                <li><strong>Visuals:</strong> Dynamic Waveform Visualizer &amp; Status Indicators</li>
+              </ul>
+            </div>
+            <div className="p-3.5 sm:p-4 rounded-xl border border-border bg-secondary/20">
+              <p className="font-bold text-sm sm:text-base mb-2 text-primary">Backend &amp; Intelligence</p>
+              <ul className="space-y-1 text-muted-foreground list-disc ml-4">
+                <li><strong>LLM Engine:</strong> Google Gemini (gemini-2.5-flash)</li>
+                <li><strong>Evaluation Engine:</strong> Structured JSON scoring &amp; rubric analysis</li>
+                <li><strong>Authentication:</strong> Firebase Authentication (OAuth / Email)</li>
+                <li><strong>Database:</strong> Cloud Firestore (Session history &amp; scorecards)</li>
+                <li><strong>API:</strong> Serverless Next.js API Routes &amp; Server Actions</li>
+              </ul>
+            </div>
+          </div>
+
+          <TypographyH3 className="text-base sm:text-lg md:text-xl font-bold my-3 mt-6 sm:mt-8">🔄 End-to-End Interview Pipeline</TypographyH3>
+          <div className="p-3 sm:p-4 rounded-xl border border-border bg-black/40 font-mono text-[11px] sm:text-xs text-zinc-300 leading-relaxed overflow-x-auto max-w-full">
+            <pre>{`Candidate Configures Role & Tech Stack
+  │
+  ├── 1. Google Gemini creates role-specific interview rubric & dynamic question set
+  ├── 2. Vapi Voice AI session begins with bi-directional audio streaming
+  ├── 3. Candidate speaks -> Real-time speech transcription & waveform rendering
+  ├── 4. AI Interviewer evaluates responses contextually with intelligent follow-ups
+  └── 5. Session completes -> Gemini generates instant scorecard & competency analytics`}</pre>
+          </div>
+
+          <TypographyH3 className="text-base sm:text-lg md:text-xl font-bold my-3 mt-6 sm:mt-8">🛠️ Technologies Used</TypographyH3>
+          <div className="flex flex-wrap gap-1.5 sm:gap-2 font-mono text-xs">
+            {[
+              "Next.js 15",
+              "React 19",
+              "TypeScript",
+              "Tailwind CSS",
+              "Vapi AI",
+              "Google Gemini",
+              "Firebase Auth",
+              "Cloud Firestore",
+              "Web Audio API",
+              "Glassmorphism UI",
+            ].map((tech) => (
+              <span key={tech} className="px-2.5 sm:px-3 py-0.5 sm:py-1 bg-secondary/40 border border-border rounded-full text-foreground text-[11px] sm:text-xs">
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
+      );
+    },
+  },
   {
     id: "ecm",
     category: "Full-Stack Web App",

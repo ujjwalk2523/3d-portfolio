@@ -36,17 +36,22 @@ A modern, high-performance personal portfolio built with **Next.js 16 (Turbopack
 
 ## 📂 Featured Projects
 
-### 1. [ECM — Equipment Checkout Management System](https://ecm-xi.vercel.app/)
+### 1. [LeveLift — AI Mock Interview Platform](https://ai-mock-interviews-ochre-beta.vercel.app/)
+- **Tech Stack:** Next.js 15, React 19, TypeScript, Tailwind CSS, Vapi AI Web SDK, Google Gemini (gemini-2.5-flash), Firebase Auth, Cloud Firestore.
+- **Features:** Real-time conversational AI voice mock interviews, dynamic role & seniority question generation, instant multi-dimensional scorecards & competency analytics, and glassmorphic glowing waveform UI.
+- **Repository:** [github.com/ujjwalk2523/ai-mock-interviews](https://github.com/ujjwalk2523/ai-mock-interviews)
+
+### 2. [ECM — Equipment Checkout Management System](https://ecm-xi.vercel.app/)
 - **Tech Stack:** Java 17, Spring Boot 3, Spring Data JPA, H2 Database, Maven, Vanilla JS, HTML5, CSS3.
 - **Features:** Automated laboratory resource booking, inventory tracking, REST API backend, and dynamic order state management.
 - **Repository:** [github.com/ujjwalk2523/ecm](https://github.com/ujjwalk2523/ecm)
 
-### 2. [Carbonly — Blockchain Carbon Credit Platform](https://carbonly-iota.vercel.app/)
+### 3. [Carbonly — Blockchain Carbon Credit Platform](https://carbonly-iota.vercel.app/)
 - **Tech Stack:** Solidity, Ethereum, Hardhat, MetaMask, Node.js, Express, MongoDB, React, Tailwind CSS.
 - **Features:** Decentralized carbon offset marketplace, farmer afforestation tokenization, and smart contract settlement.
 - **Repository:** [github.com/ujjwalk2523/CARBONLY](https://github.com/ujjwalk2523/CARBONLY)
 
-### 3. [AI Health Chatbot](https://ai-health-chatbot-bo43szgap2qmekrzx37k8h.streamlit.app/)
+### 4. [AI Health Chatbot](https://ai-health-chatbot-bo43szgap2qmekrzx37k8h.streamlit.app/)
 - **Tech Stack:** Python, Scikit-Learn, Machine Learning, Streamlit, RESTful API.
 - **Features:** Intelligent disease prediction pipeline from user-reported symptoms with risk probability assessments.
 - **Repository:** [github.com/ujjwalk2523/AI-Health-Chatbot](https://github.com/ujjwalk2523/AI-Health-Chatbot)
@@ -112,3 +117,4 @@ A modern, high-performance personal portfolio built with **Next.js 16 (Turbopack
 
 This project is open source and available under the [MIT License](LICENSE).
 Base design inspiration from the 3D portfolio ecosystem.
+l
